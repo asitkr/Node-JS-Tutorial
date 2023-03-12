@@ -9,9 +9,11 @@ app.get('/profile', (req, res) => {
     const user = {
         name: "Aashit",
         email: "aashit@gmail.com",
-        city: 'Noida'
+        city: 'Noida',
+        country: "India",
+        skills: ['html', 'css', 'JavaScript']
     }
-    res.render('profile');
+    res.render('profile', {user});
 })
 
 app.listen(PORT);

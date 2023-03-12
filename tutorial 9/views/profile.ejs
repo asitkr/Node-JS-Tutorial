@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>EJS Template engine</h1>
+    <h1>EJS Template engine for Dynamic</h1>
+    <p>Name: <%= user.name %></p>
+    <p>Email: <%= user.email %></p>
+    <p>City: <%= user.city %></p>
+    <ul>
+        <% user.skills.forEach((item) => { %>
+            <li> <%=item %> </li>
+        <% }) %>
+    </ul>
 </body>
 </html>
